@@ -1,8 +1,7 @@
 import "./home.css";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import { useEffect } from "react";
 
 const Home = () => {
 	const [username, setUsername] = useState("");
@@ -11,17 +10,6 @@ const Home = () => {
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState("");
 	const [isRegister, setIsRegister] = useState(false);
-
-	const navigate = useNavigate();
-
-	const currentUser = JSON.parse(localStorage.getItem("user"));
-	const user = currentUser?.user;
-
-	useEffect(() => {
-		if (user) {
-			navigate("/chat");
-		}
-	}, []);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -41,18 +29,21 @@ const Home = () => {
 					};
 
 					const res = await axios.post(
-						"http://localhost:5000/api/auth",
+						"https://jonie-bot.onrender.com/api/auth",
 						newUser
 					);
 					setIsRegister(false);
 				}
 			} else {
-				const res = await axios.post("http://localhost:5000/api/auth/login", {
-					username,
-					password,
-				});
+				const res = await axios.post(
+					"https://jonie-bot.onrender.com/api/auth/login",
+					{
+						username,
+						password,
+					}
+				);
+				window.location.replace("/chat");
 				localStorage.setItem("user", JSON.stringify(res.data));
-				navigate("/chat");
 			}
 		} catch (err) {
 			console.log(err);

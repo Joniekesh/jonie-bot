@@ -18,7 +18,7 @@ const App = () => {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/" element={<Home />}></Route>
+				<Route path="/" element={user ? <Chat /> : <Home />}></Route>
 				<Route
 					path="/chat"
 					element={

@@ -26,7 +26,10 @@ const Chat = () => {
 		const fetchChats = async () => {
 			setLoading(true);
 			try {
-				const res = await axios.get("http://localhost:5000/api/openai", config);
+				const res = await axios.get(
+					"https://jonie-bot.onrender.com/api/openai",
+					config
+				);
 				setChats(res.data);
 				setLoading(false);
 			} catch (err) {
@@ -39,7 +42,7 @@ const Chat = () => {
 
 	const handleLeave = () => {
 		localStorage.removeItem("user");
-		navigate("/");
+		window.location.replace("/");
 	};
 
 	useEffect(() => {

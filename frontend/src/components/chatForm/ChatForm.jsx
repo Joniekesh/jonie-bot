@@ -29,7 +29,7 @@ const ChatForm = ({ chats, setChats }) => {
 			setLoading(true);
 			try {
 				const res = await axios.post(
-					"http://localhost:5000/api/openai",
+					"https://jonie-bot.onrender.com/api/openai",
 					{
 						prompt,
 					},

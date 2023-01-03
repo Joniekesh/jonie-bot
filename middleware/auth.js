@@ -19,7 +19,7 @@ const auth = async (req, res, next) => {
 
 			req.user = user;
 			next();
-		} catch (error) {
+		} catch (err) {
 			res.status(500).json(err);
 		}
 	} else {
