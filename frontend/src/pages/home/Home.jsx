@@ -75,6 +75,7 @@ const Home = () => {
 							placeholder="Enter username"
 							value={username}
 							onChange={(e) => setUsername(e.target.value)}
+							required
 						/>
 					</div>
 					{isRegister && (
@@ -85,6 +86,7 @@ const Home = () => {
 								placeholder="Enter email"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
+								required
 							/>
 						</div>
 					)}
@@ -95,6 +97,7 @@ const Home = () => {
 							placeholder="Enter password"
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
+							required
 						/>
 					</div>
 					{isRegister && (
