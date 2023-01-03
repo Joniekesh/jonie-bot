@@ -1,0 +1,86 @@
+.chat {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(3, 3, 68);
+}
+
+.chatContainer {
+	display: flex;
+	flex-direction: column;
+	height: 95vh;
+	width: 50vw;
+	min-width: 300px;
+	border-radius: 10px;
+	background-color: white;
+	overflow: hidden;
+}
+
+.chatTop {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: #f0f0f0;
+
+	height: 70px;
+}
+
+.topLeft {
+	display: flex;
+	align-items: center;
+}
+
+.arrow {
+	margin-right: 18px;
+	cursor: pointer;
+	color: rgb(3, 3, 68);
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.botImg {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.topTitle {
+	margin-left: 8px;
+	font-weight: bold;
+	color: rgb(3, 3, 68);
+}
+
+.toRight {
+	cursor: pointer;
+	font-weight: bold;
+	color: rgb(3, 3, 68);
+}
+
+.chatMiddle {
+	display: flex;
+	background-color: gray;
+	height: calc(95% - 70px);
+	flex-direction: column;
+	gap: 10px;
+	overflow-y: scroll;
+}
+
+.chatMiddle::-webkit-scrollbar {
+	width: 8px;
+	background-color: #aaa;
+}
+.chatMiddle::-webkit-scrollbar-thumb {
+	width: 8px;
+	background-color: teal;
+}
+
+.chatBottom {
+	display: flex;
+	padding: 10px;
+	background-color: #f0f0f0;
+	height: 70px;
+}

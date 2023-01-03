@@ -1,0 +1,47 @@
+.chatForm {
+	width: 100%;
+	position: relative;
+}
+
+.error {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	background-color: rgba(255, 0, 0, 0.719);
+	color: white;
+	padding: 6px;
+	border-radius: 5px;
+	width: max-content;
+	font-size: 13px;
+}
+
+.cForm {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	gap: 10px;
+	border: 1px solid teal;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.chatFormInput {
+	border: none;
+	background-color: inherit;
+}
+
+.chatFormInput:focus {
+	outline: none;
+}
+
+.formBtn {
+	padding: 8px;
+	background-color: teal;
+	color: white;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+}

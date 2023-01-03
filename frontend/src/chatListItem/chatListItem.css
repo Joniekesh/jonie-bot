@@ -1,0 +1,38 @@
+.chatListDetailsContainer {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.userC {
+	padding: 12px;
+	background-color: darkslategray;
+}
+
+.botC {
+	background-color: rgba(47, 79, 79, 0.438);
+
+	padding: 12px;
+}
+
+.chatListTop {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.chatListUserImg {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.chatListUsername {
+	font-weight: bold;
+	color: rgb(3, 3, 68);
+}
+
+.chatListBottomDesc {
+	text-align: justify;
+}
