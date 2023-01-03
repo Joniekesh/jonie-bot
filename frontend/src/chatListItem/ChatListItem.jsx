@@ -34,7 +34,7 @@ const ChatListItem = ({ chat }) => {
 			<div className="chatListDetailsContainer">
 				<div className="userC">
 					<div className="chatListTop">
-						<img className="chatListUserImg" src="/assets/avatar.jpg" alt="" />
+						<img className="chatListUserImg" src="/assets/avatar.jpeg" alt="" />
 						<span className="chatListUsername">{user?.username}</span>
 					</div>
 					<div className="chatListBottom">

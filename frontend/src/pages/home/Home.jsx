@@ -2,6 +2,7 @@ import "./home.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useEffect } from "react";
 
 const Home = () => {
 	const [username, setUsername] = useState("");
@@ -12,6 +13,15 @@ const Home = () => {
 	const [isRegister, setIsRegister] = useState(false);
 
 	const navigate = useNavigate();
+
+	const currentUser = JSON.parse(localStorage.getItem("user"));
+	const user = currentUser?.user;
+
+	useEffect(() => {
+		if (user) {
+			navigate("/chat");
+		}
+	}, []);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();

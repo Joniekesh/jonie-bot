@@ -66,9 +66,16 @@ const Chat = () => {
 					</div>
 				</div>
 				<div className="chatMiddle">
-					{loading
-						? "Loading..."
-						: chats.map((chat) => <ChatListItem chat={chat} key={chat._id} />)}
+					{loading ? (
+						"Loading..."
+					) : chats.length > 0 ? (
+						chats.map((chat) => <ChatListItem chat={chat} key={chat._id} />)
+					) : (
+						<span className="noChats">
+							Not chats yet. You can start by asking Jonie Bot whatever you
+							want.
+						</span>
+					)}
 					<div ref={scrollRef}></div>
 				</div>
 				<div className="chatBottom">
