@@ -1,7 +1,7 @@
 import "./chat.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ChatForm from "../../components/chatForm/ChatForm";
 import ChatListItem from "../../chatListItem/ChatListItem";
 import { useRef } from "react";
@@ -14,7 +14,6 @@ const Chat = () => {
 	const currentUser = JSON.parse(localStorage.getItem("user"));
 	const TOKEN = currentUser?.token;
 
-	const navigate = useNavigate();
 
 	const config = {
 		headers: {
